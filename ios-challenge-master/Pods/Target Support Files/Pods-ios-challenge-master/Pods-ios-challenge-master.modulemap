@@ -1,0 +1,6 @@
+framework module Pods_ios_challenge_master {
+  umbrella header "Pods-ios-challenge-master-umbrella.h"
+
+  export *
+  module * { export * }
+}

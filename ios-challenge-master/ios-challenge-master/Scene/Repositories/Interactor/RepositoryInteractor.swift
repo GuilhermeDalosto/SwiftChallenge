@@ -1,0 +1,32 @@
+//
+//  RepositoryInteractor.swift
+//  ios-challenge-master
+//
+//  Created by Guilherme Martins Dalosto de Oliveira on 03/06/20.
+//  Copyright © 2020 Guilherme Martins Dalosto de Oliveira. All rights reserved.
+//
+
+import Foundation
+
+final class RepositoryInteractor: RepositoryInteractorProtocol{
+    
+    var presenter: RepositoryPresenter?
+    var fetchDataWorker: RepositoryWorker?
+    
+    init(){
+        fetchDataWorker = RepositoryWorker()
+    }
+    
+    func fetchRepository(request: RepositoryList.Request.RepositoryEntity?) {
+        fetchDataWorker?.fetchData(completion: { (repository, error) in
+            if error != nil{
+                return
+            }
+            
+            print(repository)
+            
+        })
+    }
+    
+    
+}
