@@ -33,8 +33,9 @@
 		AC27EB5324884E2200BD240E /* RepositoryWorkerLogic.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC27EB5224884E2200BD240E /* RepositoryWorkerLogic.swift */; };
 		AC5A86EE24894AD00080BFF4 /* ItemDecoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC5A86ED24894AD00080BFF4 /* ItemDecoder.swift */; };
 		AC5A86F72489521E0080BFF4 /* RepositoryEntity+Sequence.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC5A86F62489521E0080BFF4 /* RepositoryEntity+Sequence.swift */; };
+		AC6A4E062489838A001B1818 /* RepositoryView+TVDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC6A4E052489838A001B1818 /* RepositoryView+TVDelegate.swift */; };
+		AC6A4E092489AC44001B1818 /* ReceiveRefreshEventProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC6A4E082489AC44001B1818 /* ReceiveRefreshEventProtocol.swift */; };
 		AC6E55FA24895B42007A1239 /* RepositoryView+TVDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC6E55F924895B42007A1239 /* RepositoryView+TVDataSource.swift */; };
-		AC6E55FC24895D7C007A1239 /* RepositoryTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC6E55FB24895D7C007A1239 /* RepositoryTableView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -80,8 +81,9 @@
 		AC27EB5224884E2200BD240E /* RepositoryWorkerLogic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryWorkerLogic.swift; sourceTree = "<group>"; };
 		AC5A86ED24894AD00080BFF4 /* ItemDecoder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemDecoder.swift; sourceTree = "<group>"; };
 		AC5A86F62489521E0080BFF4 /* RepositoryEntity+Sequence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "RepositoryEntity+Sequence.swift"; sourceTree = "<group>"; };
+		AC6A4E052489838A001B1818 /* RepositoryView+TVDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "RepositoryView+TVDelegate.swift"; sourceTree = "<group>"; };
+		AC6A4E082489AC44001B1818 /* ReceiveRefreshEventProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReceiveRefreshEventProtocol.swift; sourceTree = "<group>"; };
 		AC6E55F924895B42007A1239 /* RepositoryView+TVDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "RepositoryView+TVDataSource.swift"; sourceTree = "<group>"; };
-		AC6E55FB24895D7C007A1239 /* RepositoryTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryTableView.swift; sourceTree = "<group>"; };
 		AE6BC663D55356AE06508001 /* Pods_ios_challenge_masterTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ios_challenge_masterTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D4E05C900DCF1D8592A9F7D2 /* Pods-ios-challenge-masterTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ios-challenge-masterTests.debug.xcconfig"; path = "Target Support Files/Pods-ios-challenge-masterTests/Pods-ios-challenge-masterTests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -239,6 +241,7 @@
 				AC27EB4424884A4A00BD240E /* Interactor */,
 				AC27EB302488349A00BD240E /* Presenter */,
 				AC27EB2F2488349600BD240E /* View */,
+				AC6A4E082489AC44001B1818 /* ReceiveRefreshEventProtocol.swift */,
 			);
 			path = Repositories;
 			sourceTree = "<group>";
@@ -265,9 +268,9 @@
 		AC27EB382488391500BD240E /* Table View */ = {
 			isa = PBXGroup;
 			children = (
-				AC6E55FB24895D7C007A1239 /* RepositoryTableView.swift */,
 				AC27EB392488392700BD240E /* RepositoryViewTableCell.swift */,
 				AC6E55F924895B42007A1239 /* RepositoryView+TVDataSource.swift */,
+				AC6A4E052489838A001B1818 /* RepositoryView+TVDelegate.swift */,
 			);
 			path = "Table View";
 			sourceTree = "<group>";
@@ -309,6 +312,7 @@
 			isa = PBXGroup;
 			children = (
 				AC27EB2924882F6300BD240E /* AuthorEntity.swift */,
+				AC6A4E072489A971001B1818 /* Owner Decoder */,
 			);
 			path = Author;
 			sourceTree = "<group>";
@@ -317,8 +321,8 @@
 			isa = PBXGroup;
 			children = (
 				AC27EB2B24882F6B00BD240E /* RepositoryEntity.swift */,
-				AC5A86F5248952080080BFF4 /* Repository Sequence */,
 				AC5A86EC24894AC10080BFF4 /* Repository Decoder */,
+				AC5A86F5248952080080BFF4 /* Repository Sequence */,
 			);
 			path = Repository;
 			sourceTree = "<group>";
@@ -346,6 +350,13 @@
 				AC5A86F62489521E0080BFF4 /* RepositoryEntity+Sequence.swift */,
 			);
 			path = "Repository Sequence";
+			sourceTree = "<group>";
+		};
+		AC6A4E072489A971001B1818 /* Owner Decoder */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "Owner Decoder";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -535,11 +546,12 @@
 				AC27EB372488380B00BD240E /* RepositoryView.swift in Sources */,
 				AC27EB5324884E2200BD240E /* RepositoryWorkerLogic.swift in Sources */,
 				AC27EB2224882BFB00BD240E /* GitHubServiceAPI.swift in Sources */,
+				AC6A4E062489838A001B1818 /* RepositoryView+TVDelegate.swift in Sources */,
 				AC27EB5124884E0200BD240E /* RepositoryWorker.swift in Sources */,
 				AC27EB4624884A5800BD240E /* RepositoryInteractorProtocol.swift in Sources */,
 				AC27EB352488364100BD240E /* RepositoryPresenterLogicProtocol.swift in Sources */,
 				AC27EB3A2488392700BD240E /* RepositoryViewTableCell.swift in Sources */,
-				AC6E55FC24895D7C007A1239 /* RepositoryTableView.swift in Sources */,
+				AC6A4E092489AC44001B1818 /* ReceiveRefreshEventProtocol.swift in Sources */,
 				AC27EB2A24882F6300BD240E /* AuthorEntity.swift in Sources */,
 				AC27EB4E24884D1300BD240E /* RepositoryInteractor.swift in Sources */,
 				AC27EB2524882CC800BD240E /* APIServiceError.swift in Sources */,

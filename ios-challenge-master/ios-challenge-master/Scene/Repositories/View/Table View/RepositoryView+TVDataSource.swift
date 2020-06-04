@@ -11,16 +11,22 @@ import UIKit
 extension RepositoryView: UITableViewDataSource{
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return self.tableView.values!.count
+        guard let value = self.values else {return 1}
+        return value.count
+    }
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return Metrics.screenSize.Height*0.15
     }
     
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        guard let value = self.tableView.values else {return self.tableView.repositoryCell}
-        let cell = self.tableView.repositoryCell
-        cell.repositoryName.text = value[indexPath.row].name
-        cell.starCount.text = "\(value[indexPath.row].starCount)"
-        cell.authorName.text = value[indexPath.row].author.name        
+        guard let value = self.values?[indexPath.row] else {return UITableViewCell()}
+        let cell = tableView.dequeueReusableCell(withIdentifier: "RepositoryTableCell", for: indexPath) as! RepositoryViewTableCell
+        cell.repositoryName.text = value.name
+        cell.starCount.text = "\(value.starCount)"
+        cell.authorName.text = value.author.login
+        cell.languageName.text = value.language
         return cell
     }
     

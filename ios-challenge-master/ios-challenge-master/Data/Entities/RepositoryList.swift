@@ -13,6 +13,9 @@ enum RepositoryList{
         struct RepositoryEntity{
             var name: String
         }
+        struct RepositoryEntityMockData{
+            var data: String?
+        }
     }
     
     struct Response{

@@ -8,8 +8,8 @@
 
 import UIKit
 
-final class RepositoryViewController: UIViewController{
-    
+final class RepositoryViewController: UIViewController, ReceiveRefreshEventProtocol{
+        
     var remoteView: RepositoryView?
     var interactor = RepositoryInteractor()
     var presenter: RepositoryPresenterLogicProtocol
@@ -17,7 +17,13 @@ final class RepositoryViewController: UIViewController{
     
     init(presenter: RepositoryPresenterLogicProtocol){
         self.presenter = presenter
+        self.remoteView = RepositoryView()
         super.init(nibName: nil, bundle: nil)
+        self.remoteView!.delegate = self
+        
+        interactor.presenter = self.presenter
+        interactor.fetchRepository(request: RepositoryList.Request.RepositoryEntityMockData.init())
+        self.view = self.remoteView
     }
     
     required init?(coder: NSCoder) {
@@ -30,13 +36,17 @@ final class RepositoryViewController: UIViewController{
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        interactor.presenter = self.presenter
-        interactor.fetchRepository(request: nil)
-        self.view = selfd.remoteView
+    }
+    
+    func contactForData(){
+        interactor.fetchRepository(request: RepositoryList.Request.RepositoryEntityMockData.init())
     }
     
     func receiveData(repositories: [RepositoryEntity]){        
-        self.remoteView?.tableView.values = repositories
+        self.remoteView!.values = repositories
+        self.remoteView!.tableView.refreshControl?.endRefreshing()
+        self.remoteView!.tableView.reloadData()
+        print("Data receive with success")
     }
     
     

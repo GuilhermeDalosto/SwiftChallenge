@@ -14,10 +14,7 @@ final class GitHubServiceAPI{
     
      let jsonDecoder: JSONDecoder = {
         let jsonDecoder = JSONDecoder()
-        jsonDecoder.keyDecodingStrategy = .convertFromSnakeCase
-        let dateFormatter = DateFormatter()
-        dateFormatter.dateFormat = "dd-mm-yyyy"
-        jsonDecoder.dateDecodingStrategy = .formatted(dateFormatter)
+        jsonDecoder.keyDecodingStrategy = .convertFromSnakeCase        
         return jsonDecoder
     }()
 }

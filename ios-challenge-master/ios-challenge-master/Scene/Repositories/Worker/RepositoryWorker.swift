@@ -21,10 +21,8 @@ final class RepositoryWorker: RepositoryWorkerLogic{
             case .success(let response):
                 do{                    
                     let repositories: [RepositoryEntity] = try ItemDecoder.decode(response.data)
-                    
-                    completion(repositories,nil)
-                    
-                    
+                    print(repositories)
+                    completion(repositories,nil)                    
                 }catch{
                     print(error.localizedDescription)
                     completion(nil, error)

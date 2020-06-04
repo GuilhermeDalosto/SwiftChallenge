@@ -7,18 +7,34 @@
 //
 
 import UIKit
+import SnapKit
 
-final class RepositoryTableCell: UITableViewCell{
-        
-    private(set) var container: UIView = {
-        let view = UIView()
-        view.backgroundColor = .white
-        view.layer.masksToBounds = true
-        view.layer.cornerRadius = 10.0
+final class RepositoryViewTableCell: UITableViewCell{
+    
+    lazy var repositoryName: UILabel = {
+        let label = UILabel()
+        label.textColor = .black
+        label.font = UIFont(name: "HelveticaNeue", size: 20)
+        label.textAlignment = NSTextAlignment.left
+        label.sizeToFit()
+        return label
+    }()
+    
+    lazy var starCount: UILabel = {
+        let label = UILabel()
+        label.textColor = .black
+        label.font = UIFont(name: "HelveticaNeue", size: 12)
+        label.textAlignment = NSTextAlignment.left
+        label.sizeToFit()
+        return label
+    }()
+    
+    lazy var starImage: UIImageView = {
+        let view = UIImageView(image: UIImage(named: "starIcon"))        
         return view
     }()
     
-    private(set) var repositoryName: UILabel = {
+    lazy var authorName: UILabel = {
         let label = UILabel()
         label.textColor = .black
         label.font = UIFont(name: "HelveticaNeue", size: 12)
@@ -27,16 +43,13 @@ final class RepositoryTableCell: UITableViewCell{
         return label
     }()
     
-    private(set) var starCount: UILabel = {
-        let label = UILabel()
-        label.textColor = .black
-        label.font = UIFont(name: "HelveticaNeue", size: 12)
-        label.textAlignment = NSTextAlignment.left
-        label.sizeToFit()
-        return label
+    lazy var starImage: UIImageView = {
+        let view = UIImageView(image: UIImage(named: "starIcon"))
+        return view
     }()
-        
-    private(set) var authorName: UILabel = {
+    
+    
+    lazy var languageName: UILabel = {
         let label = UILabel()
         label.textColor = .black
         label.font = UIFont(name: "HelveticaNeue", size: 12)
@@ -45,14 +58,12 @@ final class RepositoryTableCell: UITableViewCell{
         return label
     }()
     
-    private(set) var languageName: UILabel = {
-        let label = UILabel()
-        label.textColor = .black
-        label.font = UIFont(name: "HelveticaNeue", size: 12)
-        label.textAlignment = NSTextAlignment.left
-        label.sizeToFit()
-        return label
+    lazy var languageImage: UIImageView = {
+        let view = UIImageView(image: UIImage(named: "languageIcon"))
+        return view
     }()
+    
+    
     
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style,reuseIdentifier: reuseIdentifier)
@@ -71,7 +82,56 @@ final class RepositoryTableCell: UITableViewCell{
         self.layer.shadowRadius = 5.0
         self.layer.shadowOpacity = 0.2
         
-        self.addSubview(container)
-        container.addSubview(authorName)
+        //     self.addSubview(container)
+        
+        self.addSubview(repositoryName)
+        
+        self.addSubview(starCount)
+        self.addSubview(starImage)
+        
+        self.addSubview(authorName)
+        
+        self.addSubview(languageName)
+        self.addSubview(languageImage)
+        
+        makeConstraints()
+    }
+    
+    private func makeConstraints(){
+        
+        repositoryName.snp.makeConstraints { (make) in
+            make.top.equalToSuperview().inset(15)
+            make.left.equalToSuperview().inset(30)
+        }
+        
+        languageName.snp.makeConstraints { (make) in
+            make.bottom.equalToSuperview().inset(15)
+            make.left.equalToSuperview().inset(45)
+        }
+        
+        languageImage.snp.makeConstraints { (make) in
+            make.bottom.equalToSuperview().inset(12)
+            make.left.equalToSuperview().inset(25)
+        }
+        
+        
+        starCount.snp.makeConstraints { (make) in
+            make.bottom.equalToSuperview().inset(15)
+            make.left.equalToSuperview().inset(140)
+        }
+        
+        starImage.snp.makeConstraints { (make) in
+            make.bottom.equalToSuperview().inset(17)
+            make.left.equalToSuperview().inset(125)
+        }
+        
+        authorName.snp.makeConstraints { (make) in
+            make.bottom.equalToSuperview().inset(15)
+            make.right.equalToSuperview().inset(30)
+        }
+        
+        
+        
+        
     }
 }

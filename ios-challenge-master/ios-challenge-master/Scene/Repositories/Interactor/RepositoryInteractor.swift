@@ -17,7 +17,7 @@ final class RepositoryInteractor: RepositoryInteractorProtocol{
         fetchDataWorker = RepositoryWorker()
     }
     
-    func fetchRepository(request: RepositoryList.Request.RepositoryEntity?) {
+    func fetchRepository(request: RepositoryList.Request.RepositoryEntityMockData) {
         fetchDataWorker?.fetchData(completion: { (repositories, error) in
             if error != nil{ return }            
             self.presenter!.setupRepositories(transferredRepositories: repositories!)

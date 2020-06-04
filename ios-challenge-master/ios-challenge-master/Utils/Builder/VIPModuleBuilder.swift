@@ -11,10 +11,8 @@ import UIKit
 final class VIPModuleBuilder{
      func build() -> UIViewController{
         let presenter = RepositoryPresenter()
-        let view = RepositoryView()
-        let viewModel = RepositoryViewController(presenter: presenter)
-        viewModel.remoteView = view
-        
-        return viewModel
+        let viewController = RepositoryViewController(presenter: presenter)        
+        presenter.remoteViewController = viewController
+        return viewController
     }
 }

@@ -9,17 +9,17 @@
 import Foundation
 
 struct AuthorEntity: Codable{
-    let name: String
+    let login: String
     let profilePicture: String
     
     enum CodingKeys: String, CodingKey{
-        case name
+        case login
         case profilePicture
     }
     
     init(from decoder: Decoder) throws {
         let container = try decoder.container(keyedBy: CodingKeys.self)
-        self.name = try container.decodeIfPresent(String.self, forKey: .name) ?? "Username"
+        self.login = try container.decodeIfPresent(String.self, forKey: .login) ?? "Username"
         self.profilePicture = try container.decodeIfPresent(String.self, forKey: .profilePicture) ?? "profileURL"
     }
 }

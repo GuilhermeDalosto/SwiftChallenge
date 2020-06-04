@@ -9,5 +9,5 @@
 import Foundation
 
 protocol RepositoryInteractorProtocol{
-    func fetchRepository(request: RepositoryList.Request.RepositoryEntity?)
+    func fetchRepository(request: RepositoryList.Request.RepositoryEntityMockData)
 }
