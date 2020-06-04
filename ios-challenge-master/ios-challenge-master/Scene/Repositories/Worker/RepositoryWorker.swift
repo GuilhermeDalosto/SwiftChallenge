@@ -25,7 +25,7 @@ final class RepositoryWorker: RepositoryWorkerLogic{
                     
                     // FIX
                     let items = jsonResult["items"] as! [[String:Any]]
-                    let jsonToData = try JSONSerialization.data(withJSONObject: items, options: .prettyPrinted)
+                    let jsonToData = try JSONSerialization.data(withJSONObject: items, options: .prettyPrinted)"
                     for element in items{
                         let owner = element["owner"] as! [String:Any]
                         print(owner["login"]!)
