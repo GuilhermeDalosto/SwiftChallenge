@@ -18,13 +18,11 @@ final class RepositoryInteractor: RepositoryInteractorProtocol{
     }
     
     func fetchRepository(request: RepositoryList.Request.RepositoryEntity?) {
-        fetchDataWorker?.fetchData(completion: { (repository, error) in
+        fetchDataWorker?.fetchData(completion: { (repositories, error) in
             if error != nil{
                 return
             }
-            
-            print(repository)
-            
+            presenter.repositories = repositories
         })
     }
     

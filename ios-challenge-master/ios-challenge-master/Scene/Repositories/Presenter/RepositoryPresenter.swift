@@ -10,8 +10,11 @@ import Foundation
 
 final class RepositoryPresenter: RepositoryPresenterLogicProtocol{
     
+    var repositories: [RepositoryEntity]?
     
     func setupView() {
-        
+        for repository in repositories {
+            print(repository)
+        }
     }
 }

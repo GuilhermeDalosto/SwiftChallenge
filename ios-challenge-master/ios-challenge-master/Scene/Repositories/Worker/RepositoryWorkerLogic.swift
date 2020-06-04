@@ -9,5 +9,5 @@
 import Foundation
 
 protocol RepositoryWorkerLogic{
-    func fetchData(completion: @escaping (RepositoryEntity?,Error?) -> ()) 
+    func fetchData(completion: @escaping ([RepositoryEntity]?,Error?) -> ()) 
 }

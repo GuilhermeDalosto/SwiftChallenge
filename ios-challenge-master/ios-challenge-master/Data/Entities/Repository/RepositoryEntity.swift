@@ -14,9 +14,9 @@ struct RepositoryEntity: Codable{
     let starCount: Int
     
     enum CodingKeys: String, CodingKey{
-        case author
+        case author = "owner"
         case name
-        case starCount
+        case starCount = "stargazersCount"
     }
     
     init(from decoder: Decoder) throws {
@@ -26,4 +26,8 @@ struct RepositoryEntity: Codable{
         self.starCount = try container.decodeIfPresent(Int.self, forKey: .starCount) ?? 0
         
     }
+}
+
+extension RepositoryEntity: Sequence{
+    
 }

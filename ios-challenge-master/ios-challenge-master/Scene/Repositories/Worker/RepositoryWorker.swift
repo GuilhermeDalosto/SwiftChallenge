@@ -14,27 +14,14 @@ final class RepositoryWorker: RepositoryWorkerLogic{
     
     let serviceRequest = MoyaProvider<NetworkService>()
     
-    func fetchData(completion: @escaping (RepositoryEntity?, Error?) -> ()) {
+    func fetchData(completion: @escaping ([RepositoryEntity]?, Error?) -> ()) {
         
         serviceRequest.request(.listQuery){ (result) in
             switch result{
             case .success(let response):
-                do{
+                do{                    
+                    let repositories: [RepositoryEntity] = try ItemDecoder.decode(response.data)
                     
-                    let jsonResult = try JSONSerialization.jsonObject(with: response.data, options: .mutableContainers) as! NSDictionary
-                    
-                    // FIX
-                    let items = jsonResult["items"] as! [[String:Any]]
-                    let jsonToData = try JSONSerialization.data(withJSONObject: items, options: .prettyPrinted)"
-                    for element in items{
-                        let owner = element["owner"] as! [String:Any]
-                        print(owner["login"]!)
-                    }
-                    
-                    let repositories = try GitHubServiceAPI().jsonDecoder.decode(RepositoryEntity.self, from: response.data)
-                    print("------------------------")
-                    print(repositories)
-                        
                     completion(repositories,nil)
                     
                     
