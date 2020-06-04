@@ -10,11 +10,19 @@ import Foundation
 
 final class RepositoryPresenter: RepositoryPresenterLogicProtocol{
     
-    var repositories: [RepositoryEntity]?
+    var storageRepositories: [RepositoryEntity]?
+    var remoteViewController: RepositoryViewController?
     
-    func setupView() {
-        for repository in repositories {
-            print(repository)
-        }
+    func setupRepositories(transferredRepositories: [RepositoryEntity]){
+        storageRepositories = transferredRepositories
     }
+    
+    
+    func passDataToRemote() {
+        remoteViewController!.receiveData(repositories: self.storageRepositories!)        
+    }
+    
+    
+    
+    
 }

@@ -32,6 +32,9 @@
 		AC27EB5124884E0200BD240E /* RepositoryWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC27EB5024884E0200BD240E /* RepositoryWorker.swift */; };
 		AC27EB5324884E2200BD240E /* RepositoryWorkerLogic.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC27EB5224884E2200BD240E /* RepositoryWorkerLogic.swift */; };
 		AC5A86EE24894AD00080BFF4 /* ItemDecoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC5A86ED24894AD00080BFF4 /* ItemDecoder.swift */; };
+		AC5A86F72489521E0080BFF4 /* RepositoryEntity+Sequence.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC5A86F62489521E0080BFF4 /* RepositoryEntity+Sequence.swift */; };
+		AC6E55FA24895B42007A1239 /* RepositoryView+TVDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC6E55F924895B42007A1239 /* RepositoryView+TVDataSource.swift */; };
+		AC6E55FC24895D7C007A1239 /* RepositoryTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC6E55FB24895D7C007A1239 /* RepositoryTableView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -76,6 +79,9 @@
 		AC27EB5024884E0200BD240E /* RepositoryWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryWorker.swift; sourceTree = "<group>"; };
 		AC27EB5224884E2200BD240E /* RepositoryWorkerLogic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryWorkerLogic.swift; sourceTree = "<group>"; };
 		AC5A86ED24894AD00080BFF4 /* ItemDecoder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemDecoder.swift; sourceTree = "<group>"; };
+		AC5A86F62489521E0080BFF4 /* RepositoryEntity+Sequence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "RepositoryEntity+Sequence.swift"; sourceTree = "<group>"; };
+		AC6E55F924895B42007A1239 /* RepositoryView+TVDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "RepositoryView+TVDataSource.swift"; sourceTree = "<group>"; };
+		AC6E55FB24895D7C007A1239 /* RepositoryTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryTableView.swift; sourceTree = "<group>"; };
 		AE6BC663D55356AE06508001 /* Pods_ios_challenge_masterTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ios_challenge_masterTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D4E05C900DCF1D8592A9F7D2 /* Pods-ios-challenge-masterTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ios-challenge-masterTests.debug.xcconfig"; path = "Target Support Files/Pods-ios-challenge-masterTests/Pods-ios-challenge-masterTests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -231,7 +237,6 @@
 			children = (
 				AC27EB4F24884DF700BD240E /* Worker */,
 				AC27EB4424884A4A00BD240E /* Interactor */,
-				AC27EB31248834A500BD240E /* Controller */,
 				AC27EB302488349A00BD240E /* Presenter */,
 				AC27EB2F2488349600BD240E /* View */,
 			);
@@ -242,6 +247,7 @@
 			isa = PBXGroup;
 			children = (
 				AC27EB362488380B00BD240E /* RepositoryView.swift */,
+				AC27EB322488354800BD240E /* RepositoryViewController.swift */,
 				AC27EB382488391500BD240E /* Table View */,
 			);
 			path = View;
@@ -250,24 +256,18 @@
 		AC27EB302488349A00BD240E /* Presenter */ = {
 			isa = PBXGroup;
 			children = (
-				AC27EB3D2488451500BD240E /* RepositoryPresenter.swift */,
 				AC27EB342488364100BD240E /* RepositoryPresenterLogicProtocol.swift */,
+				AC27EB3D2488451500BD240E /* RepositoryPresenter.swift */,
 			);
 			path = Presenter;
-			sourceTree = "<group>";
-		};
-		AC27EB31248834A500BD240E /* Controller */ = {
-			isa = PBXGroup;
-			children = (
-				AC27EB322488354800BD240E /* RepositoryViewController.swift */,
-			);
-			path = Controller;
 			sourceTree = "<group>";
 		};
 		AC27EB382488391500BD240E /* Table View */ = {
 			isa = PBXGroup;
 			children = (
+				AC6E55FB24895D7C007A1239 /* RepositoryTableView.swift */,
 				AC27EB392488392700BD240E /* RepositoryViewTableCell.swift */,
+				AC6E55F924895B42007A1239 /* RepositoryView+TVDataSource.swift */,
 			);
 			path = "Table View";
 			sourceTree = "<group>";
@@ -317,6 +317,7 @@
 			isa = PBXGroup;
 			children = (
 				AC27EB2B24882F6B00BD240E /* RepositoryEntity.swift */,
+				AC5A86F5248952080080BFF4 /* Repository Sequence */,
 				AC5A86EC24894AC10080BFF4 /* Repository Decoder */,
 			);
 			path = Repository;
@@ -337,6 +338,14 @@
 				AC5A86ED24894AD00080BFF4 /* ItemDecoder.swift */,
 			);
 			path = "Repository Decoder";
+			sourceTree = "<group>";
+		};
+		AC5A86F5248952080080BFF4 /* Repository Sequence */ = {
+			isa = PBXGroup;
+			children = (
+				AC5A86F62489521E0080BFF4 /* RepositoryEntity+Sequence.swift */,
+			);
+			path = "Repository Sequence";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -530,6 +539,7 @@
 				AC27EB4624884A5800BD240E /* RepositoryInteractorProtocol.swift in Sources */,
 				AC27EB352488364100BD240E /* RepositoryPresenterLogicProtocol.swift in Sources */,
 				AC27EB3A2488392700BD240E /* RepositoryViewTableCell.swift in Sources */,
+				AC6E55FC24895D7C007A1239 /* RepositoryTableView.swift in Sources */,
 				AC27EB2A24882F6300BD240E /* AuthorEntity.swift in Sources */,
 				AC27EB4E24884D1300BD240E /* RepositoryInteractor.swift in Sources */,
 				AC27EB2524882CC800BD240E /* APIServiceError.swift in Sources */,
@@ -538,9 +548,11 @@
 				AC5A86EE24894AD00080BFF4 /* ItemDecoder.swift in Sources */,
 				AC27EB332488354800BD240E /* RepositoryViewController.swift in Sources */,
 				AC27EB3E2488451500BD240E /* RepositoryPresenter.swift in Sources */,
+				AC6E55FA24895B42007A1239 /* RepositoryView+TVDataSource.swift in Sources */,
 				AC27EB4C24884C3D00BD240E /* RepositoryList.swift in Sources */,
 				AC27EB1E24882A5500BD240E /* NetworkService.swift in Sources */,
 				AC27EAFA2488298B00BD240E /* SceneDelegate.swift in Sources */,
+				AC5A86F72489521E0080BFF4 /* RepositoryEntity+Sequence.swift in Sources */,
 				AC27EB022488298B00BD240E /* ios_challenge_master.xcdatamodeld in Sources */,
 				AC27EB2C24882F6B00BD240E /* RepositoryEntity.swift in Sources */,
 				AC27EB3C248844C900BD240E /* VIPModuleBuilder.swift in Sources */,

@@ -18,7 +18,34 @@ final class RepositoryTableCell: UITableViewCell{
         return view
     }()
     
+    private(set) var repositoryName: UILabel = {
+        let label = UILabel()
+        label.textColor = .black
+        label.font = UIFont(name: "HelveticaNeue", size: 12)
+        label.textAlignment = NSTextAlignment.left
+        label.sizeToFit()
+        return label
+    }()
+    
+    private(set) var starCount: UILabel = {
+        let label = UILabel()
+        label.textColor = .black
+        label.font = UIFont(name: "HelveticaNeue", size: 12)
+        label.textAlignment = NSTextAlignment.left
+        label.sizeToFit()
+        return label
+    }()
+        
     private(set) var authorName: UILabel = {
+        let label = UILabel()
+        label.textColor = .black
+        label.font = UIFont(name: "HelveticaNeue", size: 12)
+        label.textAlignment = NSTextAlignment.left
+        label.sizeToFit()
+        return label
+    }()
+    
+    private(set) var languageName: UILabel = {
         let label = UILabel()
         label.textColor = .black
         label.font = UIFont(name: "HelveticaNeue", size: 12)

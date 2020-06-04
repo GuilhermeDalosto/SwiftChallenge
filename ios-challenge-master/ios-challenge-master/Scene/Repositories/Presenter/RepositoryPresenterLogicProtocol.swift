@@ -9,5 +9,6 @@
 import Foundation
 
 protocol RepositoryPresenterLogicProtocol{
-    func setupView() -> Void
+    func setupRepositories(transferredRepositories: [RepositoryEntity]) -> Void
+    func passDataToRemote() -> Void
 }

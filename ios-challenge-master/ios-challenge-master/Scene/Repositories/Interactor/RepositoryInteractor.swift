@@ -10,7 +10,7 @@ import Foundation
 
 final class RepositoryInteractor: RepositoryInteractorProtocol{
     
-    var presenter: RepositoryPresenter?
+    var presenter: RepositoryPresenterLogicProtocol?
     var fetchDataWorker: RepositoryWorker?
     
     init(){
@@ -19,10 +19,8 @@ final class RepositoryInteractor: RepositoryInteractorProtocol{
     
     func fetchRepository(request: RepositoryList.Request.RepositoryEntity?) {
         fetchDataWorker?.fetchData(completion: { (repositories, error) in
-            if error != nil{
-                return
-            }
-            presenter.repositories = repositories
+            if error != nil{ return }            
+            self.presenter!.setupRepositories(transferredRepositories: repositories!)
         })
     }
     

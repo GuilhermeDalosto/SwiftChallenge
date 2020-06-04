@@ -9,6 +9,7 @@
 import Foundation
 
 struct RepositoryEntity: Codable{
+    
     let author: AuthorEntity
     let name: String
     let starCount: Int
@@ -28,6 +29,3 @@ struct RepositoryEntity: Codable{
     }
 }
 
-extension RepositoryEntity: Sequence{
-    
-}

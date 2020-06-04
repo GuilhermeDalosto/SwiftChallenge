@@ -10,8 +10,10 @@ import UIKit
 
 final class RepositoryViewController: UIViewController{
     
+    var remoteView: RepositoryView?
     var interactor = RepositoryInteractor()
     var presenter: RepositoryPresenterLogicProtocol
+    
     
     init(presenter: RepositoryPresenterLogicProtocol){
         self.presenter = presenter
@@ -24,13 +26,17 @@ final class RepositoryViewController: UIViewController{
     
     override func loadView() {
         super.loadView()
-        interactor.fetchRepository(request: nil)
-        presenter.setupView()
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        interactor.presenter = self.presenter
+        interactor.fetchRepository(request: nil)
+        self.view = selfd.remoteView
+    }
+    
+    func receiveData(repositories: [RepositoryEntity]){        
+        self.remoteView?.tableView.values = repositories
     }
     
     
