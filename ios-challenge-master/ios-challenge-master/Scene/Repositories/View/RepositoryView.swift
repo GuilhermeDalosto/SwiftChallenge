@@ -18,13 +18,15 @@ final class RepositoryView: UIView{
     private(set) var tableView: UITableView = {
         let view = UITableView(frame: .zero,style: .plain)
         view.register(RepositoryViewTableCell.self, forCellReuseIdentifier: "RepositoryTableCell")
+        
         return view
     }()
     
     override init(frame: CGRect){
         super.init(frame: frame)        
         self.tableView.dataSource = self
-        self.tableView.delegate = self        
+        self.tableView.delegate = self
+        self.tableView.contentInset = UIEdgeInsets(top:-20,left: 0,bottom: 0,right:  0);
         self.addSubview(tableView)
         setupConstraints()
         setupRefreshControl()
@@ -48,8 +50,8 @@ final class RepositoryView: UIView{
     
     func setupConstraints(){
         tableView.snp.makeConstraints { (make) in
-            make.left.right.equalToSuperview()
-            make.top.equalToSuperview()
+            make.leftMargin.rightMargin.equalToSuperview()
+            make.top.equalToSuperview().inset(60)
             make.height.equalTo(Metrics.screenSize.Height)
         }
     }

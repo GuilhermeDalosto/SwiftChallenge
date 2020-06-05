@@ -38,7 +38,7 @@ final class RepositoryViewTableCell: UITableViewCell{
         let label = UILabel()
         label.textColor = .black
         label.font = UIFont(name: "HelveticaNeue", size: 12)
-        label.textAlignment = NSTextAlignment.left
+        label.textAlignment = NSTextAlignment.center
         label.sizeToFit()        
         return label
     }()

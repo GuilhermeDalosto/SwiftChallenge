@@ -9,6 +9,7 @@ target 'ios-challenge-master' do
 	pod 'SnapKit'
 	pod 'Moya'
 	pod 'Kingfisher'
+	plugin 'slather'
 	
 
   target 'ios-challenge-masterTests' do

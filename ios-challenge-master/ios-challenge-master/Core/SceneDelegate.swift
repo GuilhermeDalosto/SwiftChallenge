@@ -19,12 +19,22 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         // This delegate does not imply the connecting scene or session are new (see `application:configurationForConnectingSceneSession` instead).
         guard let _ = (scene as? UIWindowScene) else { return }
         if let windowScene = scene as? UIWindowScene {
+            
+            UIApplication.shared.connectedScenes.compactMap { $0 as? UIWindowScene }.forEach { windowScene in
+                windowScene.sizeRestrictions?.minimumSize = CGSize(width: 100, height: 100)
+                windowScene.sizeRestrictions?.maximumSize = CGSize(width: 100, height: 100)
+            }
+            
             let window = UIWindow(windowScene: windowScene)
             let initialViewController = VIPModuleBuilder().build()
             window.rootViewController = initialViewController
+            window.rootViewController?.view.backgroundColor = UIColor(red: 253/255, green: 156/255, blue: 54/255, alpha: 1)
             self.window = window
             window.makeKeyAndVisible()
         }
+        
+      
+        
     }
 
     func sceneDidDisconnect(_ scene: UIScene) {

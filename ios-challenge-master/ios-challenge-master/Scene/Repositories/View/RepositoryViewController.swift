@@ -18,7 +18,7 @@ final class RepositoryViewController: UIViewController, ReceiveRefreshEventProto
     
     init(presenter: RepositoryPresenterLogicProtocol){
         self.presenter = presenter
-        self.remoteView = RepositoryView()
+        self.remoteView = RepositoryView(frame: UIScreen.main.bounds)
         super.init(nibName: nil, bundle: nil)
         self.remoteView!.delegate = self
         
@@ -69,6 +69,10 @@ final class RepositoryViewController: UIViewController, ReceiveRefreshEventProto
                     if index == repositories.count-1 {completion()}
                 }
             }
+            
+            
+            let image = UIImageView()
+            image.kf.setImage(with: url)
         }
         
     }
