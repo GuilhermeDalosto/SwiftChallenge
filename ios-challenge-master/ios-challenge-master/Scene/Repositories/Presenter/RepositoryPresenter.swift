@@ -17,13 +17,8 @@ final class RepositoryPresenter: RepositoryPresenterLogicProtocol{
         self.storageRepositories = transferredRepositories
         passDataToRemote()
     }
-    
-    
+        
     func passDataToRemote() {
         remoteViewController!.receiveData(repositories: self.storageRepositories!)        
     }
-    
-    
-    
-    
 }

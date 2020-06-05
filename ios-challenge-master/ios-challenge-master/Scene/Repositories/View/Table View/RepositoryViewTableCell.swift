@@ -39,12 +39,17 @@ final class RepositoryViewTableCell: UITableViewCell{
         label.textColor = .black
         label.font = UIFont(name: "HelveticaNeue", size: 12)
         label.textAlignment = NSTextAlignment.left
-        label.sizeToFit()
+        label.sizeToFit()        
         return label
     }()
     
-    lazy var starImage: UIImageView = {
-        let view = UIImageView(image: UIImage(named: "starIcon"))
+    lazy var authorImage: UIImageView = {
+        let view = UIImageView(image: UIImage(named: "profileIcon"))
+        view.layer.borderWidth = 1.0
+        view.layer.masksToBounds = false
+        view.layer.borderColor = UIColor.white.cgColor
+        view.layer.cornerRadius = 30 / 2
+        view.clipsToBounds = true
         return view
     }()
     
@@ -90,6 +95,7 @@ final class RepositoryViewTableCell: UITableViewCell{
         self.addSubview(starImage)
         
         self.addSubview(authorName)
+        self.addSubview(authorImage)
         
         self.addSubview(languageName)
         self.addSubview(languageImage)
@@ -130,6 +136,10 @@ final class RepositoryViewTableCell: UITableViewCell{
             make.right.equalToSuperview().inset(30)
         }
         
+        authorImage.snp.makeConstraints { (make) in
+            make.top.equalToSuperview().inset(15)
+            make.right.equalToSuperview().inset(30)
+        }
         
         
         

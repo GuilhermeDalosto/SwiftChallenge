@@ -14,7 +14,7 @@ struct AuthorEntity: Codable{
     
     enum CodingKeys: String, CodingKey{
         case login
-        case profilePicture
+        case profilePicture = "avatarUrl"
     }
     
     init(from decoder: Decoder) throws {

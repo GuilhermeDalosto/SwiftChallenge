@@ -11,9 +11,8 @@ import SnapKit
 
 final class RepositoryView: UIView{
     
-    var values: [RepositoryEntity]?
-    
-    
+    var dataRepositories: [RepositoryEntity]?
+    var imageRepositories: [UIImageView] = []
     var delegate: ReceiveRefreshEventProtocol?
     
     private(set) var tableView: UITableView = {
@@ -39,7 +38,6 @@ final class RepositoryView: UIView{
         //refreshControl.attributedTitle = NSAttributedString(string: "")
         refreshControl.addTarget(self, action: #selector(self.refreshTableView(_:)), for: .valueChanged)
         self.tableView.refreshControl = refreshControl
-        
     }
     
     @objc func refreshTableView(_ sender: AnyObject){

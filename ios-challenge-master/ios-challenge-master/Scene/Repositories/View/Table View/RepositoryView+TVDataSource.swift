@@ -11,7 +11,7 @@ import UIKit
 extension RepositoryView: UITableViewDataSource{
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        guard let value = self.values else {return 1}
+        guard let value = self.dataRepositories else {return 1}
         return value.count
     }
     
@@ -21,13 +21,16 @@ extension RepositoryView: UITableViewDataSource{
     
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        guard let value = self.values?[indexPath.row] else {return UITableViewCell()}
-        let cell = tableView.dequeueReusableCell(withIdentifier: "RepositoryTableCell", for: indexPath) as! RepositoryViewTableCell
-        cell.repositoryName.text = value.name
-        cell.starCount.text = "\(value.starCount)"
-        cell.authorName.text = value.author.login
-        cell.languageName.text = value.language
-        return cell
+        guard let value = self.dataRepositories?[indexPath.row] else {return UITableViewCell()}
+        if !(self.imageRepositories.indices.contains(indexPath.row)) {return UITableViewCell()} else{
+            let cell = tableView.dequeueReusableCell(withIdentifier: "RepositoryTableCell", for: indexPath) as! RepositoryViewTableCell
+            cell.repositoryName.text = value.name
+            cell.starCount.text = "\(value.starCount)"
+            cell.authorName.text = value.author.login
+            cell.languageName.text = value.language
+            cell.authorImage.image = self.imageRepositories[indexPath.row].image
+            return cell
+        }
     }
     
     

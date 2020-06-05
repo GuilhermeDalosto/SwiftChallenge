@@ -36,6 +36,7 @@
 		AC6A4E062489838A001B1818 /* RepositoryView+TVDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC6A4E052489838A001B1818 /* RepositoryView+TVDelegate.swift */; };
 		AC6A4E092489AC44001B1818 /* ReceiveRefreshEventProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC6A4E082489AC44001B1818 /* ReceiveRefreshEventProtocol.swift */; };
 		AC6E55FA24895B42007A1239 /* RepositoryView+TVDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC6E55F924895B42007A1239 /* RepositoryView+TVDataSource.swift */; };
+		AC9103E42489C51500AB6B81 /* ImageResize.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC9103E32489C51500AB6B81 /* ImageResize.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -84,6 +85,7 @@
 		AC6A4E052489838A001B1818 /* RepositoryView+TVDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "RepositoryView+TVDelegate.swift"; sourceTree = "<group>"; };
 		AC6A4E082489AC44001B1818 /* ReceiveRefreshEventProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReceiveRefreshEventProtocol.swift; sourceTree = "<group>"; };
 		AC6E55F924895B42007A1239 /* RepositoryView+TVDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "RepositoryView+TVDataSource.swift"; sourceTree = "<group>"; };
+		AC9103E32489C51500AB6B81 /* ImageResize.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageResize.swift; sourceTree = "<group>"; };
 		AE6BC663D55356AE06508001 /* Pods_ios_challenge_masterTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ios_challenge_masterTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D4E05C900DCF1D8592A9F7D2 /* Pods-ios-challenge-masterTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ios-challenge-masterTests.debug.xcconfig"; path = "Target Support Files/Pods-ios-challenge-masterTests/Pods-ios-challenge-masterTests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -199,6 +201,7 @@
 		AC27EB2324882CBD00BD240E /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				AC9103E22489C4E200AB6B81 /* Image */,
 				AC27EB412488496A00BD240E /* Metrics */,
 				AC27EB402488496000BD240E /* Builder */,
 				AC27EB3F2488495400BD240E /* API */,
@@ -312,7 +315,6 @@
 			isa = PBXGroup;
 			children = (
 				AC27EB2924882F6300BD240E /* AuthorEntity.swift */,
-				AC6A4E072489A971001B1818 /* Owner Decoder */,
 			);
 			path = Author;
 			sourceTree = "<group>";
@@ -352,11 +354,12 @@
 			path = "Repository Sequence";
 			sourceTree = "<group>";
 		};
-		AC6A4E072489A971001B1818 /* Owner Decoder */ = {
+		AC9103E22489C4E200AB6B81 /* Image */ = {
 			isa = PBXGroup;
 			children = (
+				AC9103E32489C51500AB6B81 /* ImageResize.swift */,
 			);
-			path = "Owner Decoder";
+			path = Image;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -543,6 +546,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AC9103E42489C51500AB6B81 /* ImageResize.swift in Sources */,
 				AC27EB372488380B00BD240E /* RepositoryView.swift in Sources */,
 				AC27EB5324884E2200BD240E /* RepositoryWorkerLogic.swift in Sources */,
 				AC27EB2224882BFB00BD240E /* GitHubServiceAPI.swift in Sources */,
