@@ -11,20 +11,25 @@ import SnapKit
 
 final class RepositoryView: UIView{
     
-    var dataRepositories: [RepositoryEntity]?
+    var dataRepositories: [RepositoryEntity] = []
     var imageRepositories: [UIImageView] = []
     var delegate: ReceiveRefreshEventProtocol?
+    // fix
+    var showTableViewLimit = 10
     
     private(set) var tableView: UITableView = {
-        let view = UITableView(frame: .zero,style: .plain)
+        let view = UITableView(frame: .zero)
         view.register(RepositoryViewTableCell.self, forCellReuseIdentifier: "RepositoryTableCell")
+        
         return view
     }()
     
     override init(frame: CGRect){
         super.init(frame: frame)        
         self.tableView.dataSource = self
-        self.tableView.delegate = self        
+        self.tableView.delegate = self
+        self.tableView.contentInset = UIEdgeInsets(top:0,left: 0,bottom: Metrics.screenSize.Height*0.15,right:  0);
+        
         self.addSubview(tableView)
         setupConstraints()
         setupRefreshControl()
@@ -48,8 +53,8 @@ final class RepositoryView: UIView{
     
     func setupConstraints(){
         tableView.snp.makeConstraints { (make) in
-            make.left.right.equalToSuperview()
-            make.top.equalToSuperview()
+            make.leftMargin.rightMargin.equalToSuperview()
+            make.top.equalToSuperview().inset(60)
             make.height.equalTo(Metrics.screenSize.Height)
         }
     }

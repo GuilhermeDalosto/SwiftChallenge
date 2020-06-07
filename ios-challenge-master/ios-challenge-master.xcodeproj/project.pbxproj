@@ -36,11 +36,21 @@
 		AC6A4E062489838A001B1818 /* RepositoryView+TVDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC6A4E052489838A001B1818 /* RepositoryView+TVDelegate.swift */; };
 		AC6A4E092489AC44001B1818 /* ReceiveRefreshEventProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC6A4E082489AC44001B1818 /* ReceiveRefreshEventProtocol.swift */; };
 		AC6E55FA24895B42007A1239 /* RepositoryView+TVDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC6E55F924895B42007A1239 /* RepositoryView+TVDataSource.swift */; };
+		AC8ACB012489D4C500F7E5F4 /* SnapshotUITest.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC8ACB002489D4C500F7E5F4 /* SnapshotUITest.swift */; };
 		AC9103E42489C51500AB6B81 /* ImageResize.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC9103E32489C51500AB6B81 /* ImageResize.swift */; };
+		AC9103F12489D12900AB6B81 /* ios_challenge_masterUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC9103F02489D12900AB6B81 /* ios_challenge_masterUITests.swift */; };
+		ACB1C9DF248ADD4200C3C36E /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = ACB1C9DE248ADD4200C3C36E /* Default-568h@2x.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
 		AC27EB0E2488298E00BD240E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = AC27EAEC2488298B00BD240E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = AC27EAF32488298B00BD240E;
+			remoteInfo = "ios-challenge-master";
+		};
+		AC9103F32489D12900AB6B81 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = AC27EAEC2488298B00BD240E /* Project object */;
 			proxyType = 1;
@@ -85,7 +95,12 @@
 		AC6A4E052489838A001B1818 /* RepositoryView+TVDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "RepositoryView+TVDelegate.swift"; sourceTree = "<group>"; };
 		AC6A4E082489AC44001B1818 /* ReceiveRefreshEventProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReceiveRefreshEventProtocol.swift; sourceTree = "<group>"; };
 		AC6E55F924895B42007A1239 /* RepositoryView+TVDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "RepositoryView+TVDataSource.swift"; sourceTree = "<group>"; };
+		AC8ACB002489D4C500F7E5F4 /* SnapshotUITest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SnapshotUITest.swift; sourceTree = "<group>"; };
 		AC9103E32489C51500AB6B81 /* ImageResize.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageResize.swift; sourceTree = "<group>"; };
+		AC9103EE2489D12900AB6B81 /* ios-challenge-masterUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "ios-challenge-masterUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		AC9103F02489D12900AB6B81 /* ios_challenge_masterUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ios_challenge_masterUITests.swift; sourceTree = "<group>"; };
+		AC9103F22489D12900AB6B81 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		ACB1C9DE248ADD4200C3C36E /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		AE6BC663D55356AE06508001 /* Pods_ios_challenge_masterTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ios_challenge_masterTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D4E05C900DCF1D8592A9F7D2 /* Pods-ios-challenge-masterTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ios-challenge-masterTests.debug.xcconfig"; path = "Target Support Files/Pods-ios-challenge-masterTests/Pods-ios-challenge-masterTests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -104,6 +119,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				495021425A198E46E6C8E9E0 /* Pods_ios_challenge_masterTests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AC9103EB2489D12900AB6B81 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -133,8 +155,10 @@
 		AC27EAEB2488298B00BD240E = {
 			isa = PBXGroup;
 			children = (
+				ACB1C9DE248ADD4200C3C36E /* Default-568h@2x.png */,
 				AC27EAF62488298B00BD240E /* ios-challenge-master */,
 				AC27EB102488298E00BD240E /* ios-challenge-masterTests */,
+				AC9103EF2489D12900AB6B81 /* ios-challenge-masterUITests */,
 				AC27EAF52488298B00BD240E /* Products */,
 				295C2F02041ECC4E1731792C /* Pods */,
 				60DC545551AA33D45A6C3EE0 /* Frameworks */,
@@ -146,6 +170,7 @@
 			children = (
 				AC27EAF42488298B00BD240E /* ios-challenge-master.app */,
 				AC27EB0D2488298E00BD240E /* ios-challenge-masterTests.xctest */,
+				AC9103EE2489D12900AB6B81 /* ios-challenge-masterUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -362,6 +387,24 @@
 			path = Image;
 			sourceTree = "<group>";
 		};
+		AC9103EF2489D12900AB6B81 /* ios-challenge-masterUITests */ = {
+			isa = PBXGroup;
+			children = (
+				AC9103F82489D13600AB6B81 /* Snapshot Test */,
+				AC9103F02489D12900AB6B81 /* ios_challenge_masterUITests.swift */,
+				AC9103F22489D12900AB6B81 /* Info.plist */,
+			);
+			path = "ios-challenge-masterUITests";
+			sourceTree = "<group>";
+		};
+		AC9103F82489D13600AB6B81 /* Snapshot Test */ = {
+			isa = PBXGroup;
+			children = (
+				AC8ACB002489D4C500F7E5F4 /* SnapshotUITest.swift */,
+			);
+			path = "Snapshot Test";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -404,6 +447,24 @@
 			productReference = AC27EB0D2488298E00BD240E /* ios-challenge-masterTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
+		AC9103ED2489D12900AB6B81 /* ios-challenge-masterUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AC9103F52489D12900AB6B81 /* Build configuration list for PBXNativeTarget "ios-challenge-masterUITests" */;
+			buildPhases = (
+				AC9103EA2489D12900AB6B81 /* Sources */,
+				AC9103EB2489D12900AB6B81 /* Frameworks */,
+				AC9103EC2489D12900AB6B81 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				AC9103F42489D12900AB6B81 /* PBXTargetDependency */,
+			);
+			name = "ios-challenge-masterUITests";
+			productName = "ios-challenge-masterUITests";
+			productReference = AC9103EE2489D12900AB6B81 /* ios-challenge-masterUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -418,6 +479,10 @@
 						CreatedOnToolsVersion = 11.4.1;
 					};
 					AC27EB0C2488298E00BD240E = {
+						CreatedOnToolsVersion = 11.4.1;
+						TestTargetID = AC27EAF32488298B00BD240E;
+					};
+					AC9103ED2489D12900AB6B81 = {
 						CreatedOnToolsVersion = 11.4.1;
 						TestTargetID = AC27EAF32488298B00BD240E;
 					};
@@ -438,6 +503,7 @@
 			targets = (
 				AC27EAF32488298B00BD240E /* ios-challenge-master */,
 				AC27EB0C2488298E00BD240E /* ios-challenge-masterTests */,
+				AC9103ED2489D12900AB6B81 /* ios-challenge-masterUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -448,10 +514,18 @@
 			buildActionMask = 2147483647;
 			files = (
 				AC27EB042488298D00BD240E /* Assets.xcassets in Resources */,
+				ACB1C9DF248ADD4200C3C36E /* Default-568h@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		AC27EB0B2488298E00BD240E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AC9103EC2489D12900AB6B81 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -583,6 +657,15 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		AC9103EA2489D12900AB6B81 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AC9103F12489D12900AB6B81 /* ios_challenge_masterUITests.swift in Sources */,
+				AC8ACB012489D4C500F7E5F4 /* SnapshotUITest.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -590,6 +673,11 @@
 			isa = PBXTargetDependency;
 			target = AC27EAF32488298B00BD240E /* ios-challenge-master */;
 			targetProxy = AC27EB0E2488298E00BD240E /* PBXContainerItemProxy */;
+		};
+		AC9103F42489D12900AB6B81 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = AC27EAF32488298B00BD240E /* ios-challenge-master */;
+			targetProxy = AC9103F32489D12900AB6B81 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -602,6 +690,7 @@
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
 				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_CODE_COVERAGE = YES;
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
 				CLANG_ENABLE_OBJC_WEAK = YES;
@@ -662,6 +751,7 @@
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
 				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_CODE_COVERAGE = YES;
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
 				CLANG_ENABLE_OBJC_WEAK = YES;
@@ -792,6 +882,44 @@
 			};
 			name = Release;
 		};
+		AC9103F62489D12900AB6B81 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 7YWK9C69PH;
+				INFOPLIST_FILE = "ios-challenge-masterUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "Academy.ios-challenge-masterUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "ios-challenge-master";
+			};
+			name = Debug;
+		};
+		AC9103F72489D12900AB6B81 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 7YWK9C69PH;
+				INFOPLIST_FILE = "ios-challenge-masterUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "Academy.ios-challenge-masterUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "ios-challenge-master";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -818,6 +946,15 @@
 			buildConfigurations = (
 				AC27EB1A2488298E00BD240E /* Debug */,
 				AC27EB1B2488298E00BD240E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		AC9103F52489D12900AB6B81 /* Build configuration list for PBXNativeTarget "ios-challenge-masterUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AC9103F62489D12900AB6B81 /* Debug */,
+				AC9103F72489D12900AB6B81 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

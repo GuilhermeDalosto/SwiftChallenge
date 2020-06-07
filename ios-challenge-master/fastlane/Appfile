@@ -1,0 +1,8 @@
+app_identifier("Academy.ios-challenge-master") # The bundle identifier of your app
+apple_id("dalostoguilherme@gmail.com") # Your Apple email address
+
+itc_team_id("120077961") # App Store Connect Team ID
+team_id("7YWK9C69PH") # Developer Portal Team ID
+
+# For more information about the Appfile, see:
+#     https://docs.fastlane.tools/advanced/#appfile

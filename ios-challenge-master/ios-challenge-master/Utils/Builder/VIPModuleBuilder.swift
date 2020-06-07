@@ -10,9 +10,12 @@ import UIKit
 
 final class VIPModuleBuilder{
      func build() -> UIViewController{
+        let nav = UINavigationController()
         let presenter = RepositoryPresenter()
-        let viewController = RepositoryViewController(presenter: presenter)        
+        let viewController = RepositoryViewController(presenter: presenter)
         presenter.remoteViewController = viewController
-        return viewController
+        viewController.title = "Most starred Repositories in GitHub"              
+        nav.addChild(viewController)        
+        return nav
     }
 }
