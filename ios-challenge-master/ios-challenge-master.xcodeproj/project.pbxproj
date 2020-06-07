@@ -31,6 +31,7 @@
 		AC27EB4E24884D1300BD240E /* RepositoryInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC27EB4D24884D1300BD240E /* RepositoryInteractor.swift */; };
 		AC27EB5124884E0200BD240E /* RepositoryWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC27EB5024884E0200BD240E /* RepositoryWorker.swift */; };
 		AC27EB5324884E2200BD240E /* RepositoryWorkerLogic.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC27EB5224884E2200BD240E /* RepositoryWorkerLogic.swift */; };
+		AC382A24248D9F1600127C58 /* RepositoryWorker_Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC382A23248D9F1600127C58 /* RepositoryWorker_Tests.swift */; };
 		AC5A86EE24894AD00080BFF4 /* ItemDecoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC5A86ED24894AD00080BFF4 /* ItemDecoder.swift */; };
 		AC5A86F72489521E0080BFF4 /* RepositoryEntity+Sequence.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC5A86F62489521E0080BFF4 /* RepositoryEntity+Sequence.swift */; };
 		AC6A4E062489838A001B1818 /* RepositoryView+TVDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC6A4E052489838A001B1818 /* RepositoryView+TVDelegate.swift */; };
@@ -39,7 +40,7 @@
 		AC8ACB012489D4C500F7E5F4 /* SnapshotUITest.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC8ACB002489D4C500F7E5F4 /* SnapshotUITest.swift */; };
 		AC9103E42489C51500AB6B81 /* ImageResize.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC9103E32489C51500AB6B81 /* ImageResize.swift */; };
 		AC9103F12489D12900AB6B81 /* ios_challenge_masterUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC9103F02489D12900AB6B81 /* ios_challenge_masterUITests.swift */; };
-		ACB1C9DF248ADD4200C3C36E /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = ACB1C9DE248ADD4200C3C36E /* Default-568h@2x.png */; };
+		ACFEADD1248DA06900F5F2E8 /* Array+RemoveDuplicates.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACFEADD0248DA06900F5F2E8 /* Array+RemoveDuplicates.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -90,6 +91,7 @@
 		AC27EB4D24884D1300BD240E /* RepositoryInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryInteractor.swift; sourceTree = "<group>"; };
 		AC27EB5024884E0200BD240E /* RepositoryWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryWorker.swift; sourceTree = "<group>"; };
 		AC27EB5224884E2200BD240E /* RepositoryWorkerLogic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryWorkerLogic.swift; sourceTree = "<group>"; };
+		AC382A23248D9F1600127C58 /* RepositoryWorker_Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryWorker_Tests.swift; sourceTree = "<group>"; };
 		AC5A86ED24894AD00080BFF4 /* ItemDecoder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemDecoder.swift; sourceTree = "<group>"; };
 		AC5A86F62489521E0080BFF4 /* RepositoryEntity+Sequence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "RepositoryEntity+Sequence.swift"; sourceTree = "<group>"; };
 		AC6A4E052489838A001B1818 /* RepositoryView+TVDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "RepositoryView+TVDelegate.swift"; sourceTree = "<group>"; };
@@ -100,7 +102,7 @@
 		AC9103EE2489D12900AB6B81 /* ios-challenge-masterUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "ios-challenge-masterUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		AC9103F02489D12900AB6B81 /* ios_challenge_masterUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ios_challenge_masterUITests.swift; sourceTree = "<group>"; };
 		AC9103F22489D12900AB6B81 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		ACB1C9DE248ADD4200C3C36E /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		ACFEADD0248DA06900F5F2E8 /* Array+RemoveDuplicates.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Array+RemoveDuplicates.swift"; sourceTree = "<group>"; };
 		AE6BC663D55356AE06508001 /* Pods_ios_challenge_masterTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ios_challenge_masterTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D4E05C900DCF1D8592A9F7D2 /* Pods-ios-challenge-masterTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ios-challenge-masterTests.debug.xcconfig"; path = "Target Support Files/Pods-ios-challenge-masterTests/Pods-ios-challenge-masterTests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -152,10 +154,25 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		AC16A73C248D9AE500DD79F9 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				AC16A73D248D9AEE00DD79F9 /* Workers */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		AC16A73D248D9AEE00DD79F9 /* Workers */ = {
+			isa = PBXGroup;
+			children = (
+				AC382A23248D9F1600127C58 /* RepositoryWorker_Tests.swift */,
+			);
+			path = Workers;
+			sourceTree = "<group>";
+		};
 		AC27EAEB2488298B00BD240E = {
 			isa = PBXGroup;
 			children = (
-				ACB1C9DE248ADD4200C3C36E /* Default-568h@2x.png */,
 				AC27EAF62488298B00BD240E /* ios-challenge-master */,
 				AC27EB102488298E00BD240E /* ios-challenge-masterTests */,
 				AC9103EF2489D12900AB6B81 /* ios-challenge-masterUITests */,
@@ -178,6 +195,7 @@
 		AC27EAF62488298B00BD240E /* ios-challenge-master */ = {
 			isa = PBXGroup;
 			children = (
+				ACFEADCF248DA04700F5F2E8 /* Extensions */,
 				AC27EB2624882D5D00BD240E /* Core */,
 				AC27EB2324882CBD00BD240E /* Utils */,
 				AC27EB1C24882A3F00BD240E /* Data */,
@@ -191,6 +209,7 @@
 		AC27EB102488298E00BD240E /* ios-challenge-masterTests */ = {
 			isa = PBXGroup;
 			children = (
+				AC16A73C248D9AE500DD79F9 /* Common */,
 				AC27EB112488298E00BD240E /* ios_challenge_masterTests.swift */,
 				AC27EB132488298E00BD240E /* Info.plist */,
 			);
@@ -405,6 +424,14 @@
 			path = "Snapshot Test";
 			sourceTree = "<group>";
 		};
+		ACFEADCF248DA04700F5F2E8 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				ACFEADD0248DA06900F5F2E8 /* Array+RemoveDuplicates.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -514,7 +541,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				AC27EB042488298D00BD240E /* Assets.xcassets in Resources */,
-				ACB1C9DF248ADD4200C3C36E /* Default-568h@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -645,6 +671,7 @@
 				AC5A86F72489521E0080BFF4 /* RepositoryEntity+Sequence.swift in Sources */,
 				AC27EB022488298B00BD240E /* ios_challenge_master.xcdatamodeld in Sources */,
 				AC27EB2C24882F6B00BD240E /* RepositoryEntity.swift in Sources */,
+				ACFEADD1248DA06900F5F2E8 /* Array+RemoveDuplicates.swift in Sources */,
 				AC27EB3C248844C900BD240E /* VIPModuleBuilder.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -654,6 +681,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				AC27EB122488298E00BD240E /* ios_challenge_masterTests.swift in Sources */,
+				AC382A24248D9F1600127C58 /* RepositoryWorker_Tests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -1,5 +1,5 @@
 # Uncomment the next line to define a global platform for your project
-# platform :ios, '9.0'
+# platform :ios, '12.0'
 
 target 'ios-challenge-master' do
   # Comment the next line if you don't want to use dynamic frameworks
@@ -9,13 +9,13 @@ target 'ios-challenge-master' do
 	pod 'SnapKit'
 	pod 'Moya'
 	pod 'Kingfisher'
-
 	plugin 'slather'
 	
 
   target 'ios-challenge-masterTests' do
     inherit! :search_paths
     # Pods for testing
+	pod 'Nimble-Snapshots'
 	pod 'Quick'
 	pod 'Nimble'
   end

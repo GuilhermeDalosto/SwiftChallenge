@@ -9,16 +9,17 @@
 import UIKit
 
 extension RepositoryView: UITableViewDelegate{
-    func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
-        print(indexPath)
-        if indexPath.row  == showTableViewLimit - 1{
-            if !(showTableViewLimit >= 30) {
-                showTableViewLimit += 3
+    
+    func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        let offSet = scrollView.contentOffset.y
+        let contentHeight = scrollView.contentSize.height
+        
+        if offSet > contentHeight - scrollView.frame.height{
+            if !(showTableViewLimit >= dataRepositories.count) {
+                // Obs : If there was more data, it would be added, because the index is showing only by the list capacity in the array
+                showTableViewLimit += 2
                 self.tableView.reloadData()
             }
         }
-        
-        
-        
     }
 }
