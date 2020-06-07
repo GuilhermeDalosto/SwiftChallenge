@@ -1,5 +1,5 @@
 //
-//  RepositoryWorker.swift
+//  RepositoryDataWorker.swift
 //  ios-challenge-master
 //
 //  Created by Guilherme Martins Dalosto de Oliveira on 03/06/20.
@@ -10,7 +10,7 @@ import UIKit
 import Moya
 import Kingfisher
 
-final class RepositoryWorker: RepositoryWorkerLogic{
+final class RepositoryDataWorker: RepositoryDataWorkerLogic{
     
     let serviceRequest = MoyaProvider<NetworkService>()
     

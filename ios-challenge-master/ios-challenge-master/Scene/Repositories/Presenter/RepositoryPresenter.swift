@@ -6,19 +6,21 @@
 //  Copyright © 2020 Guilherme Martins Dalosto de Oliveira. All rights reserved.
 //
 
-import Foundation
+import UIKit
 
 final class RepositoryPresenter: RepositoryPresenterLogicProtocol{
     
     var storageRepositories: [RepositoryEntity]?
+    var storageImageRepositories: [UIImageView]?
     var remoteViewController: RepositoryViewController?
     
-    func setupRepositories(transferredRepositories: [RepositoryEntity]){
+    func setupRepositories(transferredRepositories: [RepositoryEntity],imagesFromRepositories: [UIImageView]){
         self.storageRepositories = transferredRepositories
+        self.storageImageRepositories = imagesFromRepositories
         passDataToRemote()
     }
         
     func passDataToRemote() {
-        remoteViewController!.receiveData(repositories: self.storageRepositories!)        
+        remoteViewController!.receiveData(repositories: self.storageRepositories!,images: self.storageImageRepositories!)
     }
 }

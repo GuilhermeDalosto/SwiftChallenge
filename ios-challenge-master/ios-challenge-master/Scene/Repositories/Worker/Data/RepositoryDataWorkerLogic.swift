@@ -8,6 +8,6 @@
 
 import Foundation
 
-protocol RepositoryWorkerLogic{
+protocol RepositoryDataWorkerLogic{
     func fetchData(completion: @escaping ([RepositoryEntity]?,Error?) -> ()) 
 }

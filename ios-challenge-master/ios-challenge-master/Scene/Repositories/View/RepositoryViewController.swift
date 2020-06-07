@@ -44,38 +44,12 @@ final class RepositoryViewController: UIViewController, ReceiveRefreshEventProto
         interactor.fetchRepository(request: RepositoryList.Request.RepositoryEntityMockData.init())
     }
     
-    func receiveData(repositories: [RepositoryEntity]){
+    func receiveData(repositories: [RepositoryEntity],images: [UIImageView]){
         self.remoteView!.dataRepositories = repositories
-        transferImageData(repositories: repositories) {
-            self.remoteView!.tableView.refreshControl?.endRefreshing()
-            self.remoteView!.tableView.reloadData()
-            print("Data receive with success")
-        }
-    }
-    
-    func transferImageData(repositories: [RepositoryEntity],completion: @escaping () -> ()){
-        for index in 0..<repositories.count{
-            let url = URL(string: repositories[index].author.profilePicture)
-            let imageSet = UIImageView()
-            imageSet.kf.setImage(with: url, placeholder: nil, options: nil, progressBlock: nil) { (result) in
-                switch result{
-                case .success( _):
-                    imageSet.image = ImageResize().resizeImage(image: imageSet.image!, newWidth: 30)                    
-                    self.remoteView!.imageRepositories.append(imageSet)
-                    if index == repositories.count-1 {
-                        completion()
-                    }
-                case .failure( _):
-                    imageSet.image = UIImage.init(named: "profileIcon")
-                    if index == repositories.count-1 {completion()}
-                }
-            }
-            
-            
-            let image = UIImageView()
-            image.kf.setImage(with: url)
-        }
-        
+        self.remoteView!.imageRepositories = images
+        self.remoteView!.tableView.refreshControl?.endRefreshing()
+        self.remoteView!.tableView.reloadData()
+        print("Data receive with success")
     }
     
 }

@@ -6,9 +6,9 @@
 //  Copyright © 2020 Guilherme Martins Dalosto de Oliveira. All rights reserved.
 //
 
-import Foundation
+import UIKit
 
 protocol RepositoryPresenterLogicProtocol{
-    func setupRepositories(transferredRepositories: [RepositoryEntity]) -> Void
+    func setupRepositories(transferredRepositories: [RepositoryEntity],imagesFromRepositories: [UIImageView])
     func passDataToRemote() -> Void
 }
