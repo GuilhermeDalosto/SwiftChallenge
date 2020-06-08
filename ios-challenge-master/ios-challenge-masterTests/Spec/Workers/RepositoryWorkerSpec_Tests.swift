@@ -14,11 +14,11 @@ class RepositoryWorkerSpec_Tests: QuickSpec{
     override func spec(){
         describe("Repository worker fetch"){
     
-            var worker: RepositoryWorker?
+            var worker: RepositoryDataWorker?
             context("Can Fech data from not-Mock") {
                 
                 beforeEach {
-                    worker = RepositoryWorker()
+                    worker = RepositoryDataWorker()
                 }
                 
                 it("Should fetch any data") {

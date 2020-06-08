@@ -13,7 +13,6 @@
 		AC27EAFA2488298B00BD240E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC27EAF92488298B00BD240E /* SceneDelegate.swift */; };
 		AC27EB022488298B00BD240E /* ios_challenge_master.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = AC27EB002488298B00BD240E /* ios_challenge_master.xcdatamodeld */; };
 		AC27EB042488298D00BD240E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AC27EB032488298D00BD240E /* Assets.xcassets */; };
-		AC27EB122488298E00BD240E /* ios_challenge_masterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC27EB112488298E00BD240E /* ios_challenge_masterTests.swift */; };
 		AC27EB1E24882A5500BD240E /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC27EB1D24882A5500BD240E /* NetworkService.swift */; };
 		AC27EB2224882BFB00BD240E /* GitHubServiceAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC27EB2124882BFB00BD240E /* GitHubServiceAPI.swift */; };
 		AC27EB2524882CC800BD240E /* APIServiceError.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC27EB2424882CC800BD240E /* APIServiceError.swift */; };
@@ -40,12 +39,16 @@
 		AC8ACB012489D4C500F7E5F4 /* SnapshotUITest.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC8ACB002489D4C500F7E5F4 /* SnapshotUITest.swift */; };
 		AC9103E42489C51500AB6B81 /* ImageResize.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC9103E32489C51500AB6B81 /* ImageResize.swift */; };
 		AC9103F12489D12900AB6B81 /* ios_challenge_masterUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC9103F02489D12900AB6B81 /* ios_challenge_masterUITests.swift */; };
+		ACFB70C0248E9E0900604C5C /* ArrayRemoveDuplicateXC_Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACFB70BF248E9E0900604C5C /* ArrayRemoveDuplicateXC_Tests.swift */; };
+		ACFB70C2248E9ECF00604C5C /* RepositoryWorkerXC_Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACFB70C1248E9ECF00604C5C /* RepositoryWorkerXC_Tests.swift */; };
+		ACFB70C6248E9F6F00604C5C /* DataDecodeXC_Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACFB70C5248E9F6F00604C5C /* DataDecodeXC_Tests.swift */; };
 		ACFEADD1248DA06900F5F2E8 /* Array+RemoveDuplicates.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACFEADD0248DA06900F5F2E8 /* Array+RemoveDuplicates.swift */; };
 		ACFEADD4248DA1E200F5F2E8 /* RepositoryWorkerSpec_Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACFEADD3248DA1E200F5F2E8 /* RepositoryWorkerSpec_Tests.swift */; };
 		ACFEADD7248DA27A00F5F2E8 /* DataDecodeSpec_Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACFEADD6248DA27A00F5F2E8 /* DataDecodeSpec_Tests.swift */; };
-		ACFEADD9248DA46A00F5F2E8 /* RepositoryWorker2Spec_Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACFEADD8248DA46A00F5F2E8 /* RepositoryWorker2Spec_Tests.swift */; };
 		ACFEADDD248DA56100F5F2E8 /* RepositoryDataImageWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACFEADDC248DA56100F5F2E8 /* RepositoryDataImageWorker.swift */; };
 		ACFEADDF248DA60B00F5F2E8 /* RepositoryDataImageWorkerLogic.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACFEADDE248DA60B00F5F2E8 /* RepositoryDataImageWorkerLogic.swift */; };
+		ACFEADE2248DA99F00F5F2E8 /* RepositoriesMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACFEADE1248DA99F00F5F2E8 /* RepositoriesMock.swift */; };
+		ACFEADE4248DAAC100F5F2E8 /* UtilitiesMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACFEADE3248DAAC100F5F2E8 /* UtilitiesMock.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -77,7 +80,6 @@
 		AC27EB032488298D00BD240E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		AC27EB082488298D00BD240E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AC27EB0D2488298E00BD240E /* ios-challenge-masterTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "ios-challenge-masterTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		AC27EB112488298E00BD240E /* ios_challenge_masterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ios_challenge_masterTests.swift; sourceTree = "<group>"; };
 		AC27EB132488298E00BD240E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AC27EB1D24882A5500BD240E /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
 		AC27EB2124882BFB00BD240E /* GitHubServiceAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GitHubServiceAPI.swift; sourceTree = "<group>"; };
@@ -107,12 +109,16 @@
 		AC9103EE2489D12900AB6B81 /* ios-challenge-masterUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "ios-challenge-masterUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		AC9103F02489D12900AB6B81 /* ios_challenge_masterUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ios_challenge_masterUITests.swift; sourceTree = "<group>"; };
 		AC9103F22489D12900AB6B81 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		ACFB70BF248E9E0900604C5C /* ArrayRemoveDuplicateXC_Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArrayRemoveDuplicateXC_Tests.swift; sourceTree = "<group>"; };
+		ACFB70C1248E9ECF00604C5C /* RepositoryWorkerXC_Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryWorkerXC_Tests.swift; sourceTree = "<group>"; };
+		ACFB70C5248E9F6F00604C5C /* DataDecodeXC_Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataDecodeXC_Tests.swift; sourceTree = "<group>"; };
 		ACFEADD0248DA06900F5F2E8 /* Array+RemoveDuplicates.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Array+RemoveDuplicates.swift"; sourceTree = "<group>"; };
 		ACFEADD3248DA1E200F5F2E8 /* RepositoryWorkerSpec_Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryWorkerSpec_Tests.swift; sourceTree = "<group>"; };
 		ACFEADD6248DA27A00F5F2E8 /* DataDecodeSpec_Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataDecodeSpec_Tests.swift; sourceTree = "<group>"; };
-		ACFEADD8248DA46A00F5F2E8 /* RepositoryWorker2Spec_Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryWorker2Spec_Tests.swift; sourceTree = "<group>"; };
 		ACFEADDC248DA56100F5F2E8 /* RepositoryDataImageWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryDataImageWorker.swift; sourceTree = "<group>"; };
 		ACFEADDE248DA60B00F5F2E8 /* RepositoryDataImageWorkerLogic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryDataImageWorkerLogic.swift; sourceTree = "<group>"; };
+		ACFEADE1248DA99F00F5F2E8 /* RepositoriesMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoriesMock.swift; sourceTree = "<group>"; };
+		ACFEADE3248DAAC100F5F2E8 /* UtilitiesMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UtilitiesMock.swift; sourceTree = "<group>"; };
 		AE6BC663D55356AE06508001 /* Pods_ios_challenge_masterTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ios_challenge_masterTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D4E05C900DCF1D8592A9F7D2 /* Pods-ios-challenge-masterTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ios-challenge-masterTests.debug.xcconfig"; path = "Target Support Files/Pods-ios-challenge-masterTests/Pods-ios-challenge-masterTests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -164,21 +170,20 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		AC16A73C248D9AE500DD79F9 /* Common */ = {
+		AC16A73C248D9AE500DD79F9 /* Spec */ = {
 			isa = PBXGroup;
 			children = (
 				ACFEADD5248DA25C00F5F2E8 /* Data Operators */,
 				ACFEADD2248DA1C500F5F2E8 /* Extensions */,
 				AC16A73D248D9AEE00DD79F9 /* Workers */,
 			);
-			path = Common;
+			path = Spec;
 			sourceTree = "<group>";
 		};
 		AC16A73D248D9AEE00DD79F9 /* Workers */ = {
 			isa = PBXGroup;
 			children = (
 				ACFEADD3248DA1E200F5F2E8 /* RepositoryWorkerSpec_Tests.swift */,
-				ACFEADD8248DA46A00F5F2E8 /* RepositoryWorker2Spec_Tests.swift */,
 			);
 			path = Workers;
 			sourceTree = "<group>";
@@ -222,8 +227,10 @@
 		AC27EB102488298E00BD240E /* ios-challenge-masterTests */ = {
 			isa = PBXGroup;
 			children = (
-				AC16A73C248D9AE500DD79F9 /* Common */,
-				AC27EB112488298E00BD240E /* ios_challenge_masterTests.swift */,
+				ACFEADE0248DA98400F5F2E8 /* Mock Data */,
+				ACFB70C8248EA08900604C5C /* Common */,
+				ACFB70C7248EA06C00604C5C /* Snapshot */,
+				AC16A73C248D9AE500DD79F9 /* Spec */,
 				AC27EB132488298E00BD240E /* Info.plist */,
 			);
 			path = "ios-challenge-masterTests";
@@ -437,6 +444,47 @@
 			path = "Snapshot Test";
 			sourceTree = "<group>";
 		};
+		ACFB70C7248EA06C00604C5C /* Snapshot */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Snapshot;
+			sourceTree = "<group>";
+		};
+		ACFB70C8248EA08900604C5C /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				ACFB70CB248EA09800604C5C /* Workers */,
+				ACFB70CA248EA09200604C5C /* Extensions */,
+				ACFB70C9248EA08D00604C5C /* Data Operators */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		ACFB70C9248EA08D00604C5C /* Data Operators */ = {
+			isa = PBXGroup;
+			children = (
+				ACFB70C5248E9F6F00604C5C /* DataDecodeXC_Tests.swift */,
+			);
+			path = "Data Operators";
+			sourceTree = "<group>";
+		};
+		ACFB70CA248EA09200604C5C /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				ACFB70BF248E9E0900604C5C /* ArrayRemoveDuplicateXC_Tests.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		ACFB70CB248EA09800604C5C /* Workers */ = {
+			isa = PBXGroup;
+			children = (
+				ACFB70C1248E9ECF00604C5C /* RepositoryWorkerXC_Tests.swift */,
+			);
+			path = Workers;
+			sourceTree = "<group>";
+		};
 		ACFEADCF248DA04700F5F2E8 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
@@ -477,6 +525,15 @@
 				ACFEADDC248DA56100F5F2E8 /* RepositoryDataImageWorker.swift */,
 			);
 			path = "Image Data";
+			sourceTree = "<group>";
+		};
+		ACFEADE0248DA98400F5F2E8 /* Mock Data */ = {
+			isa = PBXGroup;
+			children = (
+				ACFEADE1248DA99F00F5F2E8 /* RepositoriesMock.swift */,
+				ACFEADE3248DAAC100F5F2E8 /* UtilitiesMock.swift */,
+			);
+			path = "Mock Data";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -729,9 +786,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				ACFEADD9248DA46A00F5F2E8 /* RepositoryWorker2Spec_Tests.swift in Sources */,
+				ACFB70C2248E9ECF00604C5C /* RepositoryWorkerXC_Tests.swift in Sources */,
 				ACFEADD7248DA27A00F5F2E8 /* DataDecodeSpec_Tests.swift in Sources */,
-				AC27EB122488298E00BD240E /* ios_challenge_masterTests.swift in Sources */,
+				ACFB70C0248E9E0900604C5C /* ArrayRemoveDuplicateXC_Tests.swift in Sources */,
+				ACFEADE4248DAAC100F5F2E8 /* UtilitiesMock.swift in Sources */,
+				ACFEADE2248DA99F00F5F2E8 /* RepositoriesMock.swift in Sources */,
+				ACFB70C6248E9F6F00604C5C /* DataDecodeXC_Tests.swift in Sources */,
 				AC382A24248D9F1600127C58 /* ArrayRemoveDuplicateSpec_Tests.swift in Sources */,
 				ACFEADD4248DA1E200F5F2E8 /* RepositoryWorkerSpec_Tests.swift in Sources */,
 			);
