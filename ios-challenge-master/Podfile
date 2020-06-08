@@ -18,6 +18,7 @@ target 'ios-challenge-master' do
 	pod 'Nimble-Snapshots'
 	pod 'Quick'
 	pod 'Nimble'
+	pod 'KIF'
   end
 
 end

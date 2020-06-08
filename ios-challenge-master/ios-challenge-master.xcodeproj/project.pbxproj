@@ -42,6 +42,7 @@
 		ACFB70C0248E9E0900604C5C /* ArrayRemoveDuplicateXC_Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACFB70BF248E9E0900604C5C /* ArrayRemoveDuplicateXC_Tests.swift */; };
 		ACFB70C2248E9ECF00604C5C /* RepositoryWorkerXC_Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACFB70C1248E9ECF00604C5C /* RepositoryWorkerXC_Tests.swift */; };
 		ACFB70C6248E9F6F00604C5C /* DataDecodeXC_Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACFB70C5248E9F6F00604C5C /* DataDecodeXC_Tests.swift */; };
+		ACFB70CD248EA0DF00604C5C /* RepositoryViewControllerSnapshots.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACFB70CC248EA0DF00604C5C /* RepositoryViewControllerSnapshots.swift */; };
 		ACFEADD1248DA06900F5F2E8 /* Array+RemoveDuplicates.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACFEADD0248DA06900F5F2E8 /* Array+RemoveDuplicates.swift */; };
 		ACFEADD4248DA1E200F5F2E8 /* RepositoryWorkerSpec_Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACFEADD3248DA1E200F5F2E8 /* RepositoryWorkerSpec_Tests.swift */; };
 		ACFEADD7248DA27A00F5F2E8 /* DataDecodeSpec_Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACFEADD6248DA27A00F5F2E8 /* DataDecodeSpec_Tests.swift */; };
@@ -112,6 +113,7 @@
 		ACFB70BF248E9E0900604C5C /* ArrayRemoveDuplicateXC_Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArrayRemoveDuplicateXC_Tests.swift; sourceTree = "<group>"; };
 		ACFB70C1248E9ECF00604C5C /* RepositoryWorkerXC_Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryWorkerXC_Tests.swift; sourceTree = "<group>"; };
 		ACFB70C5248E9F6F00604C5C /* DataDecodeXC_Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataDecodeXC_Tests.swift; sourceTree = "<group>"; };
+		ACFB70CC248EA0DF00604C5C /* RepositoryViewControllerSnapshots.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryViewControllerSnapshots.swift; sourceTree = "<group>"; };
 		ACFEADD0248DA06900F5F2E8 /* Array+RemoveDuplicates.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Array+RemoveDuplicates.swift"; sourceTree = "<group>"; };
 		ACFEADD3248DA1E200F5F2E8 /* RepositoryWorkerSpec_Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryWorkerSpec_Tests.swift; sourceTree = "<group>"; };
 		ACFEADD6248DA27A00F5F2E8 /* DataDecodeSpec_Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataDecodeSpec_Tests.swift; sourceTree = "<group>"; };
@@ -447,6 +449,8 @@
 		ACFB70C7248EA06C00604C5C /* Snapshot */ = {
 			isa = PBXGroup;
 			children = (
+				ACFB70CE248EA14200604C5C /* Repository */,
+				ACFB70CC248EA0DF00604C5C /* RepositoryViewControllerSnapshots.swift */,
 			);
 			path = Snapshot;
 			sourceTree = "<group>";
@@ -483,6 +487,13 @@
 				ACFB70C1248E9ECF00604C5C /* RepositoryWorkerXC_Tests.swift */,
 			);
 			path = Workers;
+			sourceTree = "<group>";
+		};
+		ACFB70CE248EA14200604C5C /* Repository */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Repository;
 			sourceTree = "<group>";
 		};
 		ACFEADCF248DA04700F5F2E8 /* Extensions */ = {
@@ -789,6 +800,7 @@
 				ACFB70C2248E9ECF00604C5C /* RepositoryWorkerXC_Tests.swift in Sources */,
 				ACFEADD7248DA27A00F5F2E8 /* DataDecodeSpec_Tests.swift in Sources */,
 				ACFB70C0248E9E0900604C5C /* ArrayRemoveDuplicateXC_Tests.swift in Sources */,
+				ACFB70CD248EA0DF00604C5C /* RepositoryViewControllerSnapshots.swift in Sources */,
 				ACFEADE4248DAAC100F5F2E8 /* UtilitiesMock.swift in Sources */,
 				ACFEADE2248DA99F00F5F2E8 /* RepositoriesMock.swift in Sources */,
 				ACFB70C6248E9F6F00604C5C /* DataDecodeXC_Tests.swift in Sources */,
