@@ -43,6 +43,7 @@
 		ACFB70C6248E9F6F00604C5C /* DataDecodeXC_Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACFB70C5248E9F6F00604C5C /* DataDecodeXC_Tests.swift */; };
 		ACFB70CD248EA0DF00604C5C /* RepositoryViewControllerSnapshots.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACFB70CC248EA0DF00604C5C /* RepositoryViewControllerSnapshots.swift */; };
 		ACFB70D7248ED06100604C5C /* RepositoryViewFlowSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACFB70D6248ED06100604C5C /* RepositoryViewFlowSpec.swift */; };
+		ACFB70D9248EDC9300604C5C /* KIF+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACFB70D8248EDC9300604C5C /* KIF+Extensions.swift */; };
 		ACFEADD1248DA06900F5F2E8 /* Array+RemoveDuplicates.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACFEADD0248DA06900F5F2E8 /* Array+RemoveDuplicates.swift */; };
 		ACFEADD4248DA1E200F5F2E8 /* RepositoryWorkerSpec_Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACFEADD3248DA1E200F5F2E8 /* RepositoryWorkerSpec_Tests.swift */; };
 		ACFEADD7248DA27A00F5F2E8 /* DataDecodeSpec_Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACFEADD6248DA27A00F5F2E8 /* DataDecodeSpec_Tests.swift */; };
@@ -117,6 +118,7 @@
 		ACFB70CC248EA0DF00604C5C /* RepositoryViewControllerSnapshots.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryViewControllerSnapshots.swift; sourceTree = "<group>"; };
 		ACFB70D5248ED06000604C5C /* ios-challenge-masterUITests-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ios-challenge-masterUITests-Bridging-Header.h"; sourceTree = "<group>"; };
 		ACFB70D6248ED06100604C5C /* RepositoryViewFlowSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryViewFlowSpec.swift; sourceTree = "<group>"; };
+		ACFB70D8248EDC9300604C5C /* KIF+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "KIF+Extensions.swift"; sourceTree = "<group>"; };
 		ACFEADD0248DA06900F5F2E8 /* Array+RemoveDuplicates.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Array+RemoveDuplicates.swift"; sourceTree = "<group>"; };
 		ACFEADD3248DA1E200F5F2E8 /* RepositoryWorkerSpec_Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryWorkerSpec_Tests.swift; sourceTree = "<group>"; };
 		ACFEADD6248DA27A00F5F2E8 /* DataDecodeSpec_Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataDecodeSpec_Tests.swift; sourceTree = "<group>"; };
@@ -499,6 +501,7 @@
 			children = (
 				ACFB70D6248ED06100604C5C /* RepositoryViewFlowSpec.swift */,
 				ACFB70D5248ED06000604C5C /* ios-challenge-masterUITests-Bridging-Header.h */,
+				ACFB70D8248EDC9300604C5C /* KIF+Extensions.swift */,
 			);
 			path = KIF;
 			sourceTree = "<group>";
@@ -862,6 +865,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ACFB70D9248EDC9300604C5C /* KIF+Extensions.swift in Sources */,
 				ACFB70D7248ED06100604C5C /* RepositoryViewFlowSpec.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

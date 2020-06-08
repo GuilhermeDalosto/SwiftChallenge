@@ -20,8 +20,8 @@ target 'ios-challenge-master' do
 	pod 'Nimble'
   end
 
-	target 'ios-challenge-masterUITests' do
-inherit! :search_paths
+  target 'ios-challenge-masterUITests' do
+    inherit! :search_paths
     # Pods for testing
 	pod 'Quick'
 	pod 'Nimble'

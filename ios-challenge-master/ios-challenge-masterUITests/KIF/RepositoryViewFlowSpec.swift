@@ -6,72 +6,56 @@
 //  Copyright © 2020 Guilherme Martins Dalosto de Oliveira. All rights reserved.
 //
 
-import Foundation
+import UIKit
 import Quick
 import Nimble
-import KIF_Quick
+import KIF
 
-@testable import kif_testing
+@testable import ios_challenge_master
 
-class RepositoryViewFlowSpec: KIFSpec {
+class RepositoryViewFlowSpec: QuickSpec {
+
     override func spec() {
-        
-        describe("DefaultFlowSpec behavior") {
-            
-            var sut: ViewController!
+        /* describe("RepositoryView behavior") {
+
+            var controller: UIViewController!
             var window: UIWindow!
+            let presenter = RepositoryPresenter()
+            controller = RepositoryViewController(presenter: presenter)
             
             beforeEach {
                 window = UIWindow(frame: CGRect(x:0, y:0, width: 320, height: 564))
                 window.makeKeyAndVisible()
+                window.rootViewController = VIPModuleBuilder().build()
+                
             }
-            
+
             afterEach {
                 UIView.setAnimationsEnabled(false)
                 window.isHidden = true
                 window = nil
             }
-            
-            context("on login .success") {
+
+            context("on table view load data") {
                 
                 beforeEach {
-                    sut = UIStoryboard.init(name: "Main", bundle: nil).instantiateInitialViewController() as! ViewController
+                  //  controller = VIPModuleBuilder().build()
                     
-                    window.rootViewController = sut
-                }
                 
-                it("should call present homeViewController if username and password are correct") {
-                    tester().enterText("user", intoViewWithAccessibilityLabel: "username")
-                    tester().enterText("123123", intoViewWithAccessibilityLabel: "password")
-                    
-                    expect(window).toEventually(haveValidSnapshot(named: "pre login success"))
-                    
-                    tester().tapView(withAccessibilityLabel: "btnLogin")
-                    
-                    expect(window).toEventually(haveValidSnapshot(named: "login success"))
+                    window.rootViewController = controller
                 }
-                
+
+                it("should appear table view") {
+
+                    self.tester().pullToRefreshView(withAccessibilityLabel: "tableView", pullDownDuration: KIFPullToRefreshTiming(rawValue: 2)!)
+
+                    self.tester().tapView(withAccessibilityLabel: "tableView")
+
+                }
+
             }
-            
-            context("on login .failed") {
-                
-                beforeEach {
-                    sut = UIStoryboard.init(name: "Main", bundle: nil).instantiateInitialViewController() as! ViewController
-                    
-                    window.rootViewController = sut
-                }
-                
-                it("should call close on delegate when tap close button") {
-                    tester().tapView(withAccessibilityLabel: "btnLogin")
-                    
-                    expect(window).toEventually(haveValidSnapshot(named: "login failed"))
-                    
-                    tester().tapView(withAccessibilityLabel: "Ok")
-                    
-                    expect(window).toEventually(haveValidSnapshot(named: "login failed ok"))
-                }
-                
-            }
+
         }
-    }
+  */  }
 }
+

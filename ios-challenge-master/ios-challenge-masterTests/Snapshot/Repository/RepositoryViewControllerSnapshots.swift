@@ -15,7 +15,7 @@ class RepositoryViewControllerSnapshots: QuickSpec{
     override func spec() {
            describe("RepositoryViewController Snapshots") {
             let presenter = RepositoryPresenter()
-               context("empty view controller") {
+               context("repository main view") {
                    it("should have table view") {
                     let viewController = RepositoryViewController(presenter: presenter)
                     expect(viewController.view).to(haveValidSnapshot(named: "RepositoryViewController"))
