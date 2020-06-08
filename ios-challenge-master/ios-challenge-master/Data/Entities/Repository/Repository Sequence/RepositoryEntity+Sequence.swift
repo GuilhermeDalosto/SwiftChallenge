@@ -8,6 +8,8 @@
 
 import Foundation
 
+// @author: Guilherme Dalosto
+// Struct para definição da entidade do Repositório e mapear este em um forEach
 struct RepositoryEntitySequence{
     let value: RepositoryEntity
     var list: [RepositoryEntity]

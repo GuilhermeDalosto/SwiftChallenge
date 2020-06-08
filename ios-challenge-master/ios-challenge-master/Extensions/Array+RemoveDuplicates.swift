@@ -10,6 +10,8 @@ import Foundation
 
 extension Array where Element: Equatable{
     
+    // @author: Guilherme Dalosto
+    // Remover todos elementos que estejam duplicados em uma Array
     mutating func removeDuplicates(){
         var result = [Element]()
         for value in self{

@@ -8,6 +8,7 @@
 
 import Foundation
 
+// @author: Guilherme Dalosto
 struct AuthorEntity: Codable{
     let login: String
     let profilePicture: String

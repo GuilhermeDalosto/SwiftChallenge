@@ -9,6 +9,15 @@
 import UIKit
 
 protocol RepositoryPresenterLogicProtocol{
+    
+    /// @author Guilherme Dalosto
+    /// Configura os repositórios da classe com os recebidos pelo parâmetro por delegate
+    /// - Parameters:
+    ///   - transferredRepositories: lista de repositórios transferidos de uma classe
+    ///   - imagesFromRepositories: lista de imagens transferidos de uma classe
     func setupRepositories(transferredRepositories: [RepositoryEntity],imagesFromRepositories: [UIImageView])
+    
+    /// @author Guilherme Dalosto
+    /// Transfere os dados presentes na classe definida para uma remota
     func passDataToRemote() -> Void
 }

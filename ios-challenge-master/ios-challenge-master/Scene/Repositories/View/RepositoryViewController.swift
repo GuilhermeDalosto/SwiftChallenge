@@ -40,10 +40,15 @@ final class RepositoryViewController: UIViewController, ReceiveRefreshEventProto
         super.viewDidLoad()
     }
     
+    
+    /// @author GuilhermeDalosto
+    /// Contata a sua interactor para busca de mais dados, passando uma request, presente do enum, de qual dado
     func contactForData(){
         interactor.fetchRepository(request: RepositoryList.Request.RepositoryEntityMockData.init())
     }
     
+    /// @author GuilhermeDalosto
+    /// Recebe o dado por delegate e a transfere para uma view remota para sua apresentação.
     func receiveData(repositories: [RepositoryEntity],images: [UIImageView]){
         self.remoteView!.dataRepositories = repositories
         self.remoteView!.imageRepositories = images

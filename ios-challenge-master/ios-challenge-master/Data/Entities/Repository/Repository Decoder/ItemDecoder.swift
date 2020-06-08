@@ -8,6 +8,9 @@
 
 import Foundation
 
+
+// @author: Guilherme Dalosto
+/// Decoder que serve para mapear os elementos dados na API específica, pegando os elementos de Items
 enum ItemDecoder{
     private struct Root<Element>: Decodable where Element: Decodable{
         let totalCount: Int

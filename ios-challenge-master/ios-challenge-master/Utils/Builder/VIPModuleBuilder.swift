@@ -8,6 +8,9 @@
 
 import UIKit
 
+
+// @author: Guilherme Dalosto
+/// Builder para construir o projeto de acordo com a arquitetura Vip
 final class VIPModuleBuilder{
      func build() -> UIViewController{
         let nav = UINavigationController()

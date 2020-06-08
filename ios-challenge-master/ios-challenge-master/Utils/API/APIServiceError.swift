@@ -8,6 +8,9 @@
 
 import Foundation
 
+
+// @author: Guilherme Dalosto
+/// Enum de acordo com os erros que podem acontecer na requisição API
 public enum APIServiceError: String, Error {
     case apiError
     case invalidEndpoint

@@ -8,6 +8,8 @@
 
 import Foundation
 
+// @author: Guilherme Dalosto
+/// Enum do Repositorio de acordo com suas calls e requests para passagem de valor na função
 enum RepositoryList{
     enum Request{
         struct RepositoryEntity{

@@ -19,6 +19,10 @@ final class RepositoryInteractor: RepositoryInteractorProtocol{
         fetchDataImageWorker = RepositoryDataImageWorker()
     }
     
+    
+    /// @author Guilherme Dalosto
+    /// Comunica com outras entidades, 'worker' para este realizar determinada ação em um Request
+    /// - Parameter request: A entidade repositório
     func fetchRepository(request: RepositoryList.Request.RepositoryEntityMockData) {
         fetchDataWorker?.fetchData(completion: { (repositories, error) in
             if error != nil{ return }
@@ -29,6 +33,12 @@ final class RepositoryInteractor: RepositoryInteractorProtocol{
         })
     }
     
+    
+    /// @author Guilherme Dalosto
+    /// Comunica com outras entidades,'worker'para este acessar as imagens presentes pela URL na entidade passada por parametro
+    /// - Parameters:
+    ///   - repositories: array de repositórios
+    ///   - completion: array de imagens
     func fetchImages(repositories: [RepositoryEntity],completion: @escaping ([UIImageView]) -> ()){
         fetchDataImageWorker?.fetchDataImage(repositories: repositories, completion: { (images) in
             completion(images!)

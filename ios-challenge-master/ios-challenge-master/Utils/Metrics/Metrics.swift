@@ -8,6 +8,8 @@
 
 import UIKit
 
+// @author: Guilherme Dalosto
+/// Métricas de acordo com o tamanho do device
 public enum Metrics{
     public enum screenSize{
         public static var Width: CGFloat{

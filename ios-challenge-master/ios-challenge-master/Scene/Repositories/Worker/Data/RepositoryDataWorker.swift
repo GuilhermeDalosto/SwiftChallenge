@@ -14,6 +14,9 @@ final class RepositoryDataWorker: RepositoryDataWorkerLogic{
     
     let serviceRequest = MoyaProvider<NetworkService>()
     
+    /// @author Guilherme Dalosto
+    /// Acessa todos os repositórios com o decode, retornando cada valor de cada item no array da API específica
+    /// - Parameter completion: array de repositórios requisitados
     func fetchData(completion: @escaping ([RepositoryEntity]?, Error?) -> ()) {
         
         serviceRequest.request(.listQuery){ (result) in

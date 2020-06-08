@@ -9,6 +9,14 @@
 import UIKit
 
 class ImageResize{
+    
+    
+    // @author: Guilherme Dalosto
+    /// Redimensionar a imagem de acordo com uma largura passada por parâmetro
+    /// - Parameters:
+    ///   - image: imagem a ser redimensionada
+    ///   - newWidth: novo tamanho da imagem
+    /// - Returns: imagem redimensionada
     func resizeImage(image: UIImage, newWidth: CGFloat) -> UIImage {
 
          let scale = newWidth / image.size.width

@@ -8,6 +8,8 @@
 
 import Foundation
 
+
+// @author: Guilherme Dalosto
 final class GitHubServiceAPI{
     private let urlSession = URLSession.shared
     private let baseURL = URL(string: NetworkService.baseURL)

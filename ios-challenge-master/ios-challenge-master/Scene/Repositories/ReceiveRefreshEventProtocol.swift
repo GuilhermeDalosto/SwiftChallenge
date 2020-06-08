@@ -8,6 +8,8 @@
 
 import Foundation
 
+/// @author GuilhermeDalosto
+/// Contata a sua interactor para busca de mais dados, passando uma request, presente do enum, de qual dado
 protocol ReceiveRefreshEventProtocol{
     func contactForData() -> Void
 }

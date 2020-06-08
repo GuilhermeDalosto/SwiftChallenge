@@ -450,7 +450,6 @@
 			isa = PBXGroup;
 			children = (
 				ACFB70CE248EA14200604C5C /* Repository */,
-				ACFB70CC248EA0DF00604C5C /* RepositoryViewControllerSnapshots.swift */,
 			);
 			path = Snapshot;
 			sourceTree = "<group>";
@@ -492,6 +491,7 @@
 		ACFB70CE248EA14200604C5C /* Repository */ = {
 			isa = PBXGroup;
 			children = (
+				ACFB70CC248EA0DF00604C5C /* RepositoryViewControllerSnapshots.swift */,
 			);
 			path = Repository;
 			sourceTree = "<group>";

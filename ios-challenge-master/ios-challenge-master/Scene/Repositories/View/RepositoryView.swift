@@ -38,6 +38,9 @@ final class RepositoryView: UIView{
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
+    
+    /// @author GuilhermeDalosto
+    /// Método para atualizar a table view
     func setupRefreshControl(){
         let refreshControl = UIRefreshControl()
         //refreshControl.attributedTitle = NSAttributedString(string: "")
@@ -45,12 +48,16 @@ final class RepositoryView: UIView{
         self.tableView.refreshControl = refreshControl
     }
     
+    /// @author GuilhermeDalosto
+    /// Atualiza a tab le view e contata o delegate para disponibilidade para mais dados
     @objc func refreshTableView(_ sender: AnyObject){
         print("Pull to refresh")
         delegate?.contactForData()
         self.tableView.reloadData()
     }
     
+    /// @author GuilhermeDalosto
+    /// Estabiliza as constraints da Table View na tela, do caso Super.
     func setupConstraints(){
         tableView.snp.makeConstraints { (make) in
             make.leftMargin.rightMargin.equalToSuperview()
