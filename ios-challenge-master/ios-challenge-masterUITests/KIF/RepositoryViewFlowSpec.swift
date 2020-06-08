@@ -15,6 +15,8 @@ import KIF
 
 class RepositoryViewFlowSpec: QuickSpec {
 
+    // Developer Note @Guilherme Dalosto
+    // Desenvolvendo, corrigindo alguns bugs.
     override func spec() {
         /* describe("RepositoryView behavior") {
 
